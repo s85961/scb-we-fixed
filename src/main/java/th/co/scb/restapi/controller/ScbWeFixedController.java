@@ -3,11 +3,9 @@ package th.co.scb.restapi.controller;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import th.co.scb.restapi.model.ReportSaveRequest;
-import th.co.scb.restapi.model.ReportSaveResponse;
-import th.co.scb.restapi.model.User;
-import th.co.scb.restapi.model.UserResponse;
+import th.co.scb.restapi.model.*;
 import th.co.scb.restapi.service.ScbWeFixedService;
+import th.co.scb.restapi.service.ScbWebFixedAddVoteService;
 
 @Slf4j
 @RestController
@@ -17,6 +15,9 @@ public class ScbWeFixedController {
 
     @Autowired
     private ScbWeFixedService webFixedService;
+
+    @Autowired
+    private ScbWebFixedAddVoteService addVoteService;
 
     @PostMapping("/v1/report/save")
     public ReportSaveResponse reportSave(@RequestHeader String requestUID,
@@ -32,4 +33,13 @@ public class ScbWeFixedController {
 
         return webFixedService.user(user);
     }
+
+    @PostMapping("/v1/report/addVote")
+    public ScbReportAddVoteResponse reportSave(@RequestHeader String requestUID,
+                                               @RequestBody ScbReportAddVoteRequest reportAddVoteRequest) {
+
+
+        return addVoteService.reportAddVote(reportAddVoteRequest);
+    }
+
 }
