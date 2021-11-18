@@ -99,8 +99,8 @@ public class ScbWeFixedRepository {
 
     public boolean insertAddVote(ScbReportAddVoteRequest addVoteRequest) {
         try {
-            StringBuffer sql = new StringBuffer(" INSERT INTO report_vote (categoryID,reportID, voteUserID, voteUp, voteDown, createDate) ");
-            sql.append(" VALUES (?, ?, ?, 1, 0 , now())");
+            StringBuffer sql = new StringBuffer(" INSERT INTO report_vote (categoryID,reportID, voteUserID, voteUp, voteDown, createDate,updateDate) ");
+            sql.append(" VALUES (?, ?, ?, 1, 0 , now(),now())");
             int rowEffect = jdbcTemplate.update(sql.toString(), addVoteRequest.getCategoryID(), addVoteRequest.getReportId(), addVoteRequest.getVoteUserId());
             return 1 == rowEffect;
         } catch (Exception ex) {
