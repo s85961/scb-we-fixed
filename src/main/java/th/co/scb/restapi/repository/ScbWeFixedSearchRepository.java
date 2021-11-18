@@ -3,7 +3,6 @@ package th.co.scb.restapi.repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-import th.co.scb.restapi.model.ScbReportAgentSaveRequest;
 import th.co.scb.restapi.model.ScbReportAgentSearchRequest;
 
 import java.util.List;
@@ -38,7 +37,8 @@ public class ScbWeFixedSearchRepository {
                     "(SELECT categoryID,reportID,COUNT(1) AS VoteUp FROM report_vote WHERE voteUp = 1 GROUP BY categoryID,reportID) vote ON vote.categoryID = rri.categoryID and vote.reportID = rri.reportID" +
                     " ORDER BY rri.createDate desc ";
 
-            list = jdbcTemplate.queryForList(sql, new Object[]{req.getLatitude(), req.getLongitude(), req.getCategoryID(), req.getInAreaKM()});
+            list = jdbcTemplate.queryForList(sql, new Object[]{req.getLat(), req.getLng(), req.getCategoryID(), req.getInAreaKM()});
+            System.out.println("after list");
         } catch (Exception e) {
             System.out.println("Exception [requestUID:" + requestUID + "] " + e.getMessage());
             e.printStackTrace();

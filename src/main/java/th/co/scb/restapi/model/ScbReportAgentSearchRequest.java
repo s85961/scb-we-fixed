@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class ScbReportAgentSearchRequest {
     private String categoryID;
-    private Double latitude;
-    private Double longitude;
+    private Double lat;
+    private Double lng;
     private Double inAreaKM;
 }
