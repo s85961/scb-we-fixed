@@ -7,8 +7,8 @@ import th.co.scb.restapi.model.ScbReportAddVoteRequest;
 import th.co.scb.restapi.model.ScbReportAddVoteResponse;
 import th.co.scb.restapi.model.ScbReportSaveRequest;
 import th.co.scb.restapi.model.ScbReportSaveResponse;
+import th.co.scb.restapi.service.ScbWeFixedService;
 import th.co.scb.restapi.service.ScbWebFixedAddVoteService;
-import th.co.scb.restapi.service.ScbWebFixedService;
 
 @Slf4j
 @RestController
@@ -16,7 +16,7 @@ import th.co.scb.restapi.service.ScbWebFixedService;
 public class ScbWeFixedController {
 
     @Autowired
-    private ScbWebFixedService webFixedService;
+    private ScbWeFixedService webFixedService;
 
     @Autowired
     private ScbWebFixedAddVoteService addVoteService;
