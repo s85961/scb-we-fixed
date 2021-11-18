@@ -9,6 +9,7 @@ import th.co.scb.restapi.service.ScbWebFixedAgentService;
 
 @Slf4j
 @RestController
+@CrossOrigin
 @RequestMapping("/api/scb-we-fixed")
 public class ScbWeFixedAgentController {
 

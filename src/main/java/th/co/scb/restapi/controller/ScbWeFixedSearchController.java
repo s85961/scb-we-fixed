@@ -15,6 +15,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/api/scb-we-fixed")
+@CrossOrigin
 public class ScbWeFixedSearchController {
 
     @Autowired
