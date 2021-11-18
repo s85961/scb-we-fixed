@@ -18,6 +18,7 @@ public class UserMapper implements RowMapper<User> {
         user.setPhoneNo(resultSet.getString("phoneNo"));
         user.setSocialId(resultSet.getString("socialID"));
         user.setUserId(resultSet.getString("userID"));
+        user.setUserGroupId(resultSet.getString("userGroupID"));
         return user;
     }
 }
