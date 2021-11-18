@@ -3,6 +3,6 @@ package th.co.scb.restapi.model;
 import lombok.Data;
 
 @Data
-public class ScbReportMax {
+public class ReportMax {
     private int count;
 }

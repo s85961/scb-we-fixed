@@ -3,7 +3,7 @@ package th.co.scb.restapi.model;
 import lombok.Data;
 
 @Data
-public class ScbReportSaveRequest {
+public class ReportSaveRequest {
     private String latitude;
     private String longitude;
     private String picture1;
