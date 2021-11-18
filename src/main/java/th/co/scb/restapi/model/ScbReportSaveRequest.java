@@ -2,11 +2,15 @@ package th.co.scb.restapi.model;
 
 import lombok.Data;
 
-import java.util.List;
-
 @Data
 public class ScbReportSaveRequest {
-    private String latitide;
+    private String latitude;
     private String longitude;
-    private List<String> pictures;
+    private String picture1;
+    private String picture2;
+    private String picture3;
+    private int categoryId;
+    private String userId;
+    private String topic;
+    private String description;
 }

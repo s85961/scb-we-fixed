@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import th.co.scb.restapi.model.ScbReportSaveRequest;
 import th.co.scb.restapi.model.ScbReportSaveResponse;
-import th.co.scb.restapi.service.ScbWebFixedService;
+import th.co.scb.restapi.service.ScbWeFixedService;
 
 @Slf4j
 @RestController
@@ -13,7 +13,7 @@ import th.co.scb.restapi.service.ScbWebFixedService;
 public class ScbWeFixedController {
 
     @Autowired
-    private ScbWebFixedService webFixedService;
+    private ScbWeFixedService webFixedService;
 
     @PostMapping("/v1/report/save")
     public ScbReportSaveResponse reportSave(@RequestHeader String requestUID,
