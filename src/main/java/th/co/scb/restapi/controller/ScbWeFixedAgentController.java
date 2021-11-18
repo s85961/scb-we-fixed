@@ -4,10 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import th.co.scb.restapi.model.ScbReportAgentSaveRequest;
-import th.co.scb.restapi.model.ScbReportSaveRequest;
 import th.co.scb.restapi.model.ScbReportSaveResponse;
 import th.co.scb.restapi.service.ScbWebFixedAgentService;
-import th.co.scb.restapi.service.ScbWebFixedService;
 
 @Slf4j
 @RestController
