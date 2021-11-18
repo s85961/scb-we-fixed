@@ -17,7 +17,7 @@ public class ScbWeFixedSearchRepository {
     public List search(String requestUID, ScbReportAgentSearchRequest req) {
         List list = null;
         try {
-            String sql = "SELECT rri.*,fix.*,IFNULL(vote.voteUp,0) AS oteUp FROM ( " +
+            String sql = "SELECT rri.*,fix.*,IFNULL(vote.voteUp,0) AS voteUp FROM ( " +
                     " " +
                     "SELECT ri.*  " +
                     ", (  " +
