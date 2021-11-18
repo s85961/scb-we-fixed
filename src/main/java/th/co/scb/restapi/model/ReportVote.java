@@ -9,8 +9,5 @@ public class ReportVote {
     private Integer categoryID;
     private Integer reportID;
     private Integer voteUserID;
-    private Byte voteUp;
-    private Byte voteDown;
-    private Date createDate;
-    private Date updateDate;
+    private Integer voteAmount;
 }
